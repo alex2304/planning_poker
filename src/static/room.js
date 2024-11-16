@@ -2,7 +2,7 @@ const roomId = window.location.pathname.split('/')[1];
 
 
 function displayRoom(data) {
-    const name = sessionStorage.getItem('name');
+    const name = localStorage.getItem('name');
     const results = document.getElementById('results');
     const votingButtons = document.getElementById('voting-buttons');
     const endVotingButton = document.getElementById('end-voting');
@@ -15,6 +15,7 @@ function displayRoom(data) {
     console.log(name);
     if (name) {
         document.getElementById('user-card').innerHTML = `<div id="user-avatar">${name.slice(0, 1)}</div><div id="user-name">${name}</div>`
+        changeDisplayNamePopupVisibility(true);
     }
 
     participantsList.innerHTML = '';
@@ -105,6 +106,17 @@ function calcAverage(data) {
     return result.toFixed(2);
 }
 
+function changeDisplayNamePopupVisibility(hide) {
+    let elem = document.getElementById('display-name-popup');
+    if (hide && !elem.classList.contains('hidden')) {
+        elem.classList.add('hidden');
+    } else if (!hide && elem.classList.contains('hidden')) {
+        elem.classList.remove('hidden');
+    }
+}
+
+
+
 function updateRoomStatus() {
     fetch(`/room/${roomId}`)
         .then(response => response.json())
@@ -139,8 +151,8 @@ document.getElementById('join-button').addEventListener('click', function () {
         },
         body: new URLSearchParams({name: name})
     }).then(response => response.json()).then(data => {
-        sessionStorage.setItem('name', name);
-        document.getElementById('display-name-popup').classList.add('hidden');
+        localStorage.setItem('name', name);
+        changeDisplayNamePopupVisibility(true);
         displayRoom(data);
     })
 });
@@ -193,7 +205,7 @@ document.querySelectorAll('.vote-button').forEach(button => {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
-            body: new URLSearchParams({name: sessionStorage.getItem('name'), value: value})
+            body: new URLSearchParams({name: localStorage.getItem('name'), value: value})
         })
             .then(response => response.json())
             .then(data => {
