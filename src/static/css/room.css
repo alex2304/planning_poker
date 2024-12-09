@@ -140,6 +140,14 @@
     margin-top: 50px;
 }
 
+.start-new-voting-button {
+    background-color: var(--black-button-light);
+}
+
+.start-new-voting-button:hover {
+    background-color: var(--black-button);
+}
+
 .voting-buttons {
     display: inline-block;
     flex-wrap: wrap;
@@ -237,3 +245,4 @@
     font-size: var(--font-size-small);
     color: var(--text-color-dark);
 }
+

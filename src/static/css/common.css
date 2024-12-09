@@ -1,4 +1,7 @@
 :root {
+    --black-button: #000;
+    --black-button-light: #555;
+    --text-color-white: #fff;
     --primary-color: #5A7FFD;
     --primary-color-light: #7fb0e8;
     --secondary-color: #4A90E2;
