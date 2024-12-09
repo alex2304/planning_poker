@@ -66,11 +66,6 @@
     background-color: var(--secondary-color);
 }
 
-.user-card-container {
-    justify-content: flex-end;
-    width: 100%;
-}
-
 .user-card {
     display: flex;
     justify-content: flex-end;

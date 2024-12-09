@@ -53,13 +53,29 @@ button:hover {
     display: none !important;
 }
 
+.header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+    padding-left: 25px;
+}
+
 .logo {
     position: relative;
     width: 50px;
     height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
     font-weight: bold;
     color: var(--text-color-dark);
 }
@@ -96,6 +112,16 @@ button:hover {
 
 .header-text {
     padding-left: 10px;
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-xlarge);
     font-weight: bold;
+    width: 300px;
+    height: auto;
+}
+
+.user-card-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
 }
