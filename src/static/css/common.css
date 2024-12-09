@@ -1,20 +1,56 @@
+:root {
+    --primary-color: #5A7FFD;
+    --primary-color-light: #7fb0e8;
+    --secondary-color: #4A90E2;
+    --background-light: #E5EEFF;
+    --background-light-alt: #f9f9f9;
+    --text-color-dark: #333;
+    --text-color-muted: #6C757D;
+    --error-color: red;
+    --font-family: Arial, sans-serif;
+    --font-size-small: 14px;
+    --font-size-medium: 16px;
+    --font-size-large: 20px;
+    --font-size-xlarge: 24px;
+}
+
 * {
-    /*margin: 0;*/
-    /*padding: 0;*/
-    /*box-sizing: border-box;*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*align-items: center;*/
-    /*justify-content: space-between;*/
-    /* min-height: 100vh;*/
-    font-family: Arial, sans-serif;
-    background-color: #F5F8FA;
-    color: #333;
+    font-family: var(--font-family);
+    background-color: var(--background-light-alt);
+    color: var(--text-color-dark);
     margin: 0;
     padding: 0;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: var(--font-size-medium);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--primary-color-light);
+}
+
+.hidden {
+    display: none !important;
 }
 
 .logo {
@@ -24,13 +60,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.logo {
-    /*display: flex;*/
-    align-items: center;
     font-weight: bold;
-    color: #333;
+    color: var(--text-color-dark);
 }
 
 .logo-image {
@@ -44,7 +75,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #5A7FFD;
+    background-color: var(--primary-color);
     clip-path: polygon(50% 0%, 100% 35%, 100% 100%, 0% 100%, 0% 35%);
     border-radius: 10px;
 }
@@ -53,9 +84,9 @@ body {
     content: 'PP';
     position: absolute;
     color: white;
-    font-size: 18px;
+    font-size: var(--font-size-medium);
     font-weight: bold;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
     text-align: center;
     top: 50%;
     left: 50%;
@@ -65,5 +96,6 @@ body {
 
 .header-text {
     padding-left: 10px;
-    font-size: 20px;
+    font-size: var(--font-size-large);
+    font-weight: bold;
 }

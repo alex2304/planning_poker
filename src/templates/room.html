@@ -22,7 +22,7 @@
 </div>
 <div class="flex-container voting-interface-container">
     <button id="start-voting">Start new voting</button>
-    <div id="voting-buttons" class="hidden">
+    <div id="voting-buttons" class="voting-buttons hidden">
         <button class="vote-button" data-value="1">1</button>
         <button class="vote-button" data-value="2">2</button>
         <button class="vote-button" data-value="3">3</button>
@@ -34,14 +34,14 @@
         <button class="vote-button" data-value="55">55</button>
         <button class="vote-button" data-value="89">89</button>
     </div>
-    <button id="end-voting" class="hidden">Finish voting</button>
-    <div id="results" class="hidden">
+    <button id="end-voting" class="end-voting-button hidden">Reveal cards</button>
+    <div id="results" class="results hidden">
         <h2>Vote Results</h2>
-        <div id="average">
-            <span id="average-label">Average:</span>
-            <span id="average-value">0</span>
+        <div id="average" class="average-block">
+            <span id="average-label" class="average-label">Average:</span>
+            <span id="average-value" class="average-value">0</span>
         </div>
-        <div id="votes-list">
+        <div id="votes-list" class="votes-list">
         </div>
     </div>
 </div>

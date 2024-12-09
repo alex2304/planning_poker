@@ -5,8 +5,8 @@
 }
 
 .info-text {
-    font-size: 18px;
-    color: #6C757D;
+    font-size: var(--font-size-medium);
+    color: var(--text-color-muted);
     margin-bottom: 10px;
 }
 
@@ -18,35 +18,32 @@
     margin-bottom: 20px;
 }
 
-#room-link {
+.room-link-input {
     width: 300px;
     padding: 10px;
-    border: 2px solid #5A7FFD;
+    border: 2px solid var(--primary-color);
     border-radius: 8px;
-    font-size: 16px;
+    font-size: var(--font-size-medium);
     text-align: center;
-    color: #333;
-    background-color: #E5EEFF;
+    color: var(--text-color-dark);
+    background-color: var(--background-light);
 }
 
-#join-room {
-    background-color: #5A7FFD;
+.room-link-input:hover {
+    cursor: pointer;
+}
+
+.join-room-button {
+    background-color: var(--primary-color);
     color: #fff;
     border: none;
     border-radius: 8px;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: var(--font-size-medium);
     cursor: pointer;
-}
-
-#join-room:hover {
-    background-color: #a5c8ef;
-}
-
-#room-link:hover {
-    cursor: pointer;
-}
-
-#join-room {
     margin-top: 20px;
+}
+
+.join-room-button:hover {
+    background-color: var(--primary-color-light);
 }
