@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Default Title{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}">
+    {% block styles %}{% endblock %}
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.webp') }}">
+</head>
+<body>
+<header>
+    {% include 'includes/header.html' %}
+</header>
+<main>
+    {% block content %}{% endblock %}
+</main>
+<footer>
+    {% block footer %}{% endblock %}
+</footer>
+{% block scripts %}{% endblock %}
+</body>
+</html>

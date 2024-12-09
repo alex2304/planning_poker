@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planning Poker | Voting</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='room.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='header.css') }}">
-    <link rel="icon" href="{{ url_for('static', filename='favicon.webp') }}">
-</head>
-<body>
+{% extends "base_layout.html" %}
+
+{% block title %}Planning Poker | Voting{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/room.css') }}">
+{% endblock %}
+
+{% block content %}
 <div class="modal-overlay hidden" id="display-name-popup">
     <div class="modal-content">
         <h2>Choose your display name</h2>
@@ -17,19 +15,12 @@
         <button class="join-button" id="join-button">Join the room</button>
     </div>
 </div>
-<div class="header-container">
-    {% include 'includes/header.html' %}
-    <div class="user-card-container">
-        <div id="user-card">
-        </div>
-    </div>
-</div>
-<div id="participants">
+<div class="flex-container participants-container">
     <h2>Participants (<span id="participants-count">0</span>):</h2>
     <div id="participants-list">
     </div>
 </div>
-<div id="voting-interface">
+<div class="flex-container voting-interface-container">
     <button id="start-voting">Start new voting</button>
     <div id="voting-buttons" class="hidden">
         <button class="vote-button" data-value="1">1</button>
@@ -40,6 +31,8 @@
         <button class="vote-button" data-value="13">13</button>
         <button class="vote-button" data-value="21">21</button>
         <button class="vote-button" data-value="34">34</button>
+        <button class="vote-button" data-value="55">55</button>
+        <button class="vote-button" data-value="89">89</button>
     </div>
     <button id="end-voting" class="hidden">Finish voting</button>
     <div id="results" class="hidden">
@@ -52,7 +45,8 @@
         </div>
     </div>
 </div>
+{% endblock %}
 
-<script src="{{ url_for('static', filename='room.js') }}"></script>
-</body>
-</html>
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/room.js') }}"></script>
+{% endblock %}

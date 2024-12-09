@@ -1,31 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planning Poker</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='header.css') }}">
-    <link rel="icon" href="{{ url_for('static', filename='favicon.webp') }}">
-</head>
-<body>
-{% include 'includes/header.html' %}
+{% extends "base_layout.html" %}
 
-<div class="container">
-    <p class="info-text">Open this URL to enter the voting room:</p>
-    <div class="link-container">
-        <label for="room-link"></label>
-        <input type="text" id="room-link" readonly>
+{% block title %}Planning Poker{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="flex-container join-container">
+        <p class="info-text">Open this URL to enter the voting room:</p>
+        <div class="flex-container link-container">
+            <label for="room-link"></label>
+            <input type="text" id="room-link" readonly>
+        </div>
+        <button id="join-room" class="join-room-button">Open room URL</button>
     </div>
-    <button id="join-room" class="join-room-button">Open room URL</button>
-</div>
+{% endblock %}
 
-<script src="{{ url_for('static', filename='index.js') }}"></script>
-<script>
-    document.getElementById("room-link").addEventListener("click", function () {
-        this.select();
-        document.execCommand("copy");
-    });
-</script>
-</body>
-</html>
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+{% endblock %}
