@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Room {{ room_id }}</title>
+    <title>Planning Poker | Voting</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='room.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='header.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.webp') }}">
 </head>
 <body>
-{% include 'includes/header.html' %}
-
 <div class="modal-overlay hidden" id="display-name-popup">
     <div class="modal-content">
         <h2>Choose your display name</h2>
@@ -18,8 +17,11 @@
         <button class="join-button" id="join-button">Join the room</button>
     </div>
 </div>
-<div class="user-card-container">
-    <div id="user-card">
+<div class="header-container">
+    {% include 'includes/header.html' %}
+    <div class="user-card-container">
+        <div id="user-card">
+        </div>
     </div>
 </div>
 <div id="participants">

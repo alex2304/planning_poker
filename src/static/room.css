@@ -11,6 +11,15 @@ body {
     min-height: 100vh;
 }
 
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Размещает элементы по краям */
+    align-items: center; /* Выравнивает элементы по вертикали */
+    padding: 20px; /* Добавьте отступы, если нужно */
+    width: 100%; /* Занимает всю ширину */
+    position: relative; /* Если нужно, чтобы элементы были позиционированы относительно этого контейнера */
+}
+
 .hidden {
     display: none !important;
 }
@@ -94,7 +103,7 @@ h1 {
     width: 100%;
 }
 
-#user-card {
+.user-card {
     display: flex;
     justify-content: flex-end;
     align-items: center;

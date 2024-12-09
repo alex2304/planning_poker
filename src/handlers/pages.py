@@ -14,4 +14,4 @@ def room(room_id):
     if room_id not in rooms:
         return redirect(url_for("pages.index"))
 
-    return render_template("room.html", room_id=room_id, header_text=f"Room {room_id}", participants=rooms[room_id]["participants"])
+    return render_template("room.html", room_id=room_id, header_text=f"Voting Room", participants=rooms[room_id]["participants"])

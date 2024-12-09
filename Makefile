@@ -2,7 +2,7 @@ IMAGE_NAME := planning_poker
 CONTAINER_NAME := planning_poker
 PORT := 8000
 
-.PHONY: build start stop
+.PHONY: build start stop check-image-built check-not-running
 
 build:
 	docker build -t $(IMAGE_NAME):latest .
