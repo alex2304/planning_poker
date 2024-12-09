@@ -66,34 +66,6 @@
     background-color: var(--secondary-color);
 }
 
-.user-card {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 8px;
-    font-size: var(--font-size-medium);
-    color: var(--text-color-dark);
-    padding: 0 150px;
-}
-
-.user-avatar {
-    width: 40px;
-    height: 40px;
-    background-color: var(--background-light);
-    color: var(--secondary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-size: var(--font-size-medium);
-    font-weight: bold;
-}
-
-.user-name {
-    font-size: var(--font-size-medium);
-    font-weight: bold;
-    color: var(--text-color-dark);
-}
 
 .participants-container {
     text-align: center;

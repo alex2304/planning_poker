@@ -124,4 +124,29 @@ button:hover {
     align-items: center;
     justify-content: flex-end;
     width: 100%;
+    gap: 8px;
+    font-size: var(--font-size-medium);
+    color: var(--text-color-dark);
+    padding-top: 20px;
+    padding-right: 300px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: var(--background-light);
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: var(--font-size-medium);
+    font-weight: bold;
+}
+
+.user-name {
+    font-size: var(--font-size-medium);
+    font-weight: bold;
+    color: var(--text-color-dark);
+    display: flex;
 }
